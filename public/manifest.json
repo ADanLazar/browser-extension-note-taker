@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Margin Notes",
+  "version": "1.0.0",
+  "description": "Keep rich-text notes about the site you are browsing, in a side panel. Saved automatically, exportable as Markdown.",
+  "minimum_chrome_version": "116",
+  "permissions": ["sidePanel", "storage", "tabs"],
+  "action": {
+    "default_title": "Open Margin Notes",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png"
+    }
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+N"
+      },
+      "description": "Open Margin Notes"
+    }
+  }
+}
